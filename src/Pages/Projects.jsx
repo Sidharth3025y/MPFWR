@@ -66,7 +66,8 @@ const Projects = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-purple-900 to-blue-900 pt-24 pb-16 px-6">
+   
+   <section id='projects'><div className="bg-gradient-to-b from-purple-900 to-blue-900 pt-24 pb-16 px-6">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: -50 }}
@@ -127,6 +128,7 @@ const Projects = () => {
         </motion.div>
       </div>
     </div>
+    </section>
   );
 };
 

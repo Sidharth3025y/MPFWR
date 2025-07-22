@@ -6,6 +6,7 @@ const HeroBanner = () => {
   const [showForm, setShowForm] = useState(false);
 
   return (
+    <section id='home'>
     <div className="relative overflow-hidden min-h-screen">
       {/* Hero Content Container */}
       <section className="bg-gradient-to-b from-purple-800 to-blue-900 min-h-screen flex items-center justify-center p-6">
@@ -137,6 +138,7 @@ const HeroBanner = () => {
         )}
       </AnimatePresence>
     </div>
+    </section>
   );
 };
 

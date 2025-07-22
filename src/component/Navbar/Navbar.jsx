@@ -24,10 +24,10 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { id: 1, name: 'About', icon: <FaUser className="mr-2" />, href: '#About' },
-    { id: 2, name: 'Skills', icon: <FaTools className="mr-2" />, href: '#Skills' },
-    { id: 3, name: 'Projects', icon: <FaCode className="mr-2" />, href: '#Projects' },
-    { id: 4, name: 'Contact', icon: <FaEnvelope className="mr-2" />, href: '#Footer' }
+    { id: 1, name: 'About', icon: <FaUser className="mr-2" />, href: '#about' },
+    { id: 2, name: 'Skills', icon: <FaTools className="mr-2" />, href: '#skills' },
+    { id: 3, name: 'Projects', icon: <FaCode className="mr-2" />, href: '#projects' },
+    { id: 4, name: 'Contact', icon: <FaEnvelope className="mr-2" />, href: '#footer' }
   ];
 
   return (
@@ -47,7 +47,7 @@ const Navbar = () => {
           >
             <a href="#home" className="flex items-center">
               <span className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-300 to-red-500 bg-clip-text text-transparent">
-                Sidharth Giri
+               <a href="#home"> Sidharth Giri</a> 
               </span>
             </a>
           </motion.div>

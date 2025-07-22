@@ -3,6 +3,7 @@ import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope, FaCode } from 'react-ico
 
 const Footer = () => {
   return (
+    <section id='footer'>
     <footer className="bg-black text-white py-16 px-30">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-100">
@@ -44,7 +45,7 @@ const Footer = () => {
                 <FaInstagram className="text-3xl" />
               </a>
               <a 
-                href="mailto:sid3025y@gmail.com" 
+                href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMTRpJLSrqQFhHkQnSgFTXlsgrqNKzzcxLMrXGRSvbcmZzlzGBVfznrTXFPbtqvFVGnkzsq" 
                 className="text-gray-400 hover:text-white transition-colors"
                 aria-label="Email"
               >
@@ -76,6 +77,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+    </section>
   );
 };
 

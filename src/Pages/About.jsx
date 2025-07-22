@@ -37,6 +37,8 @@ const About = () => {
   };
 
   return (
+    <section id='about'>
+
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-800 to-blue-900 py-28 px-6">
       <motion.div 
         className="container mx-auto max-w-6xl"
@@ -185,6 +187,7 @@ const About = () => {
         </motion.div>
       </motion.div>
     </div>
+    </section>
   );
 };
 
