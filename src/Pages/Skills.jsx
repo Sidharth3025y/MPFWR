@@ -53,7 +53,7 @@ const Skills = () => {
   };
 
   return (
-    <section id='skills'>
+    <section id='Skills'>
     <div className="bg-gradient-to-b from-purple-900 to-blue-900 pt-24 pb-16 px-6">
       <div className="container mx-auto">
         <motion.div

@@ -1,25 +1,26 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
-  FaHotel,
+  FaDrumstickBite,
   FaShoppingCart,
   FaPlane,
   FaCoffee,
   FaGithub,
+  FaLink,
   FaExternalLinkAlt
 } from 'react-icons/fa';
-import { SiNetlify } from 'react-icons/si';
+import { SiVercel, } from 'react-icons/si';
 
 const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'Hotel Booking',
-      description: 'A full-stack hotel reservation system with user authentication and payment integration',
-      icon: <FaHotel className="text-purple-500" />,
-      tags: ['React', 'Node.js', 'MongoDB'],
-      github: '#',
-      live: '#'
+      title: 'Fewa Chicken Point',
+      description: 'Resturant website with online order system',
+      icon: <FaDrumstickBite className="text-red-500" />,
+      tags: ['React', 'Tailwind CSS'],
+      github: 'https://github.com/Sidharth3025y/FewaChickenPoint ',
+      live: 'https://fewa-chicken-point.vercel.app/'
     },
     {
       id: 2,
@@ -41,12 +42,12 @@ const Projects = () => {
     },
     {
       id: 4,
-      title: 'Cafe Management',
-      description: 'System for cafe owners to manage orders, inventory, and staff scheduling',
+      title: 'Cafe website',
+      description: 'Cafe overview website ',
       icon: <FaCoffee className="text-yellow-500" />,
-      tags: ['MERN Stack', 'Redux', 'JWT'],
-      github: '#',
-      live: '#'
+      tags: ['HTML 5', 'CSS',],
+      github: 'https://github.com/Sidharth3025y/Cafe-',
+      live: 'https://cafe-eta-one.vercel.app/'
     }
   ];
 
@@ -67,7 +68,7 @@ const Projects = () => {
 
   return (
    
-   <section id='projects'><div className="bg-gradient-to-b from-purple-900 to-blue-900 pt-24 pb-16 px-6">
+   <section id='Projects'><div className="bg-gradient-to-b from-purple-900 to-blue-900 pt-24 pb-16 px-6">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: -50 }}
@@ -108,18 +109,18 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                <div className="flex gap-4">
-                  <a
+                <div className="flex gap-4 ml-100 mt-10">
+                  <a target='blank'
                     href={project.github}
-                    className="flex items-center text-gray-300 hover:text-white transition-colors"
+                    className="flex items-center  bg-blue-500 px-4 py-1 rounded-2xl text-gray-300 hover:text-black hover:bg-blue-700  transition-colors"
                   >
-                    <FaGithub className="mr-2" /> Code
+                    <FaGithub className="mr-2"  /> Code
                   </a>
-                  <a
+                  <a target='blank'
                     href={project.live}
-                    className="flex items-center text-gray-300 hover:text-white transition-colors"
+                    className="flex items-center  bg-blue-500 px-4 py-1 rounded-2xl text-gray-300 hover:text-black  hover:bg-blue-700  transition-colors"
                   >
-                    <SiNetlify className="mr-2" /> Live Demo
+                    < FaLink className="mr-2 ml-3  " /> Live Demo
                   </a>
                 </div>
               </div>

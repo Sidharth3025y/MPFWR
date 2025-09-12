@@ -37,7 +37,7 @@ const About = () => {
   };
 
   return (
-    <section id='about'>
+    <section id='About'>
 
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-800 to-blue-900 py-28 px-6">
       <motion.div 

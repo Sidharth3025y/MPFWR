@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaCode, FaTools, FaEnvelope, FaUser } from 'react-icons/fa';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,25 +10,20 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 10;
-      if (isScrolled !== scrolled) {
-        setScrolled(isScrolled);
-      }
+      setScrolled(window.scrollY > 10);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [scrolled]);
+  }, []);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   const navLinks = [
-    { id: 1, name: 'About', icon: <FaUser className="mr-2" />, href: '#about' },
-    { id: 2, name: 'Skills', icon: <FaTools className="mr-2" />, href: '#skills' },
-    { id: 3, name: 'Projects', icon: <FaCode className="mr-2" />, href: '#projects' },
-    { id: 4, name: 'Contact', icon: <FaEnvelope className="mr-2" />, href: '#footer' }
+    { id: 1, name: 'About', icon: <FaUser className="mr-2" />, href: '#About' },
+    { id: 2, name: 'Skills', icon: <FaTools className="mr-2" />, href: '#Skills' },
+    { id: 3, name: 'Projects', icon: <FaCode className="mr-2" />, href: '#Projects' },
+    { id: 4, name: 'Contact', icon: <FaEnvelope className="mr-2" />, href: '#Footer' }
   ];
 
   return (
@@ -39,30 +35,24 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ type: 'spring', stiffness: 300, damping: 20 }}
     >
-      <div className="container mx-auto px-6 lg:px-20"> {/* Added padding */}
+      <div className="container mx-auto px-6 lg:px-20">
         <div className="flex justify-between items-center h-16">
-          <motion.div
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.97 }}
-          >
-            <a href="#home" className="flex items-center">
+          {/* Logo */}
+          <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+            <a href ='#Home'  className="flex items-center cursor-pointer">
               <span className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-300 to-red-500 bg-clip-text text-transparent">
-               <a href="#home"> Sidharth Giri</a> 
+                Sidharth Giri
               </span>
             </a>
           </motion.div>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Nav */}
           <div className="hidden md:flex space-x-6">
             {navLinks.map((link) => (
-              <motion.div
-                key={link.id}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
+              <motion.div key={link.id} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <a 
                   href={link.href} 
-                  className="text-white/80 hover:text-white flex items-center transition-colors duration-300 text-lg font-medium"
+                  className="text-white/80 hover:text-white flex items-center transition-colors duration-300 text-lg font-medium cursor-pointer"
                 >
                   <motion.span 
                     animate={{ rotate: 360 }}
@@ -77,12 +67,13 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile Menu Button */}
           <div className="md:hidden">
             <motion.button
               onClick={toggleMenu}
               whileTap={{ scale: 0.9 }}
-              className="text-white focus:outline-none"
+              className="text-white focus:outline-none cursor-pointer"
+              aria-label="Toggle menu"
             >
               <GiHamburgerMenu size={26} />
             </motion.button>
@@ -90,7 +81,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
+      {/* Mobile Nav */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -111,13 +102,10 @@ const Navbar = () => {
                 >
                   <a
                     href={link.href}
-                    className="text-white hover:text-blue-300 flex items-center text-lg py-2"
+                    className="text-white hover:text-blue-300 flex items-center text-lg py-2 cursor-pointer"
                     onClick={() => setIsOpen(false)}
                   >
-                    <motion.span
-                      whileHover={{ scale: 1.2 }}
-                      className="mr-3 text-blue-300"
-                    >
+                    <motion.span whileHover={{ scale: 1.2 }} className="mr-3 text-blue-300">
                       {link.icon}
                     </motion.span>
                     {link.name}
