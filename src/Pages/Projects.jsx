@@ -46,8 +46,8 @@ const Projects = () => {
       description: 'Cafe overview website',
       icon: <FaCoffee className="text-yellow-500" />,
       tags: ['HTML 5', 'CSS'],
-      github: 'https://github.com/Sidharth3025y/Cafe-',
-      live: 'https://cafe-eta-one.vercel.app/',
+      github: 'https://github.com/Sidharth3025y/coffee',
+      live: 'https://coffee-gilt-six.vercel.app/',
     },
   ];
 
