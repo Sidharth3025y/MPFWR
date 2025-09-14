@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "homepage": "https://Sidharth3025y.github.io/MPFWR",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
