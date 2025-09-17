@@ -50,8 +50,8 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-2xl font-semibold text-white">Get in Touch</h3>
             <ul className="space-y-2 text-xl text-gray-400">
-              <li className="hover:text-purple-500 transition-colors">sid3025y@gmail.com</li>
-              <li className="hover:text-purple-500 transition-colors">+977-9826467839</li>
+              <li className="hover:text-purple-500 transition-colors"><a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRttWZqZphjQSKsjnlWSxzSjdhRXCTfsFhmPPjqTRkdstmMNRWBdxQtLKgVNDPHFzjXWCmB" target='_blank' >sid3025y@gmail.com</a></li>
+              <li className="hover:text-purple-500 transition-colors"><a href="tel:+9779826467839">+977-9826467839</a></li>
               <li className="hover:text-purple-500 transition-colors">Pokhara, Nepal</li>
             </ul>
           </div>
@@ -64,7 +64,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-gray-800 mt-16 pt-8 text-center text-xl text-gray-500 w-full">
+        <div className=" border-t-3 md:border-t border-gray-600 mt-5 md:mt-16 pt-8 text-center text-l md:text-xl text-gray-500 w-full">
           <p>© {new Date().getFullYear()} Sidharth Giri. All rights reserved.</p>
         </div>
 

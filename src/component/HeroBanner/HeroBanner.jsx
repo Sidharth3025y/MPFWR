@@ -46,7 +46,7 @@ const HeroBanner = () => {
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5 }}
-                className="w-80 h-80 lg:w-96 lg:h-96 rounded-full border-4 border-cyan-500/70 overflow-hidden shadow-xl mx-auto lg:mx-0 mt-20"
+                className="w-70 h-70 lg:w-96 lg:h-96 rounded-full border-4 border-cyan-500/70 overflow-hidden shadow-xl mx-auto lg:mx-0 mt-5 md:mt-20"
               >
                 <img
                   src="./sid.jpg"
@@ -62,13 +62,13 @@ const HeroBanner = () => {
                 transition={{ delay: 0.2, duration: 0.5 }}
                 className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-md mx-auto lg:mx-0"
               >
-                <div className="space-y-4 mt-20">
-                  <p className="text-3xl text-cyan-100 font-light">Hello, I'm</p>
-                  <h1 className="text-8xl md:text-7xl font-bold bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent leading-tight">
+                <div className="space-y-4 -mt-4 md:mt-20">
+                  <p className="text-3xl text-cyan-100 font-light ">Hello, I'm</p>
+                  <h1 className="text-5xl md:text-7xl  font-bold -mt-2 md:mt-0 bg-gradient-to-r from-red-400 to-cyan-400 bg-clip-text text-transparent leading-tight">
                     Sidharth Giri
                   </h1>
                   <div className="space-y-2">
-                    <p className="text-4xl text-white">MERN Stack Developer</p>
+                    <p className="text-4xl text-white -mt-2 md:mt-0">MERN Stack Developer</p>
                     <p className="text-3xl text-cyan-100">JavaScript Expert</p>
                     <p className="text-xg text-blue-200">
                       Full Stack Solutions Architect
